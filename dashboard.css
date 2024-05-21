@@ -1,0 +1,190 @@
+body {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-tecnologia-cibernetica_23-2148390330.jpg?size=626&ext=jpg&ga=GA1.1.1788068356.1716163200&semt=ais_user');
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #b10707;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+header .logo img {
+    height: 90px;
+}
+
+header .social-media {
+    display: flex;
+    align-items: center;
+}
+
+header .social-media a img {
+    height: 30px;
+    margin: 0 20px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: white;
+}
+
+header .sidebar-icon {
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+
+.sidebar {
+    display: none;
+    background-color: #dad9d9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 50vh;
+    width: 250px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar .close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    text-align: right;
+}
+
+.sidebar .user-info {
+    margin-bottom: 20px;
+}
+
+.sidebar .user-info p {
+    color: #000000;
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background-color: #000000;
+    margin: 10px 0;
+}
+
+.sidebar a {
+    display: block;
+    margin: 20px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.333% - 40px); /* Ajuste para tres tarjetas por fila */
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #252424;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+footer nav.footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .contacto p {
+    margin: 5px 0;
+}
+
+/* Sección de tarjetas adicionales */
+.card#recentlyAddedCard, .card#maintenanceCard, .card#oldestCard {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 40px); /* Ajuste para tres tarjetas por fila */
+}
+
+.card#recentlyAddedCard h3, .card#maintenanceCard h3, .card#oldestCard h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.card#recentlyAddedCard p, .card#maintenanceCard p, .card#oldestCard p {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 30px); /* Dos tarjetas por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px); /* Una tarjeta por fila en pantallas muy pequeñas */
+    }
+}

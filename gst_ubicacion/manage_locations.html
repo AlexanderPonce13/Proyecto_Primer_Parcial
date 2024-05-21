@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Ubicaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../img/logo-uleam.jpg" alt="Logo Uleam">
+        </div>
+        <nav>
+            <a href="../dashboard.html"><b>Inicio</b></a>
+            <a href='../search.html'><b>Buscar</b></a>
+            <a href='../manage_eqp/manage_equipment.html'><b>Agregar Equipos</b></a>
+            <a href='../manage_gst/manage_gestion.html'><b>Gestionar Equipos</b></a>
+            <div class="sidebar-icon" onclick="toggleSidebar()"><b>☰</b></div>
+        </nav>
+    </header>
+
+    <aside id="sidebar" class="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">×</div>
+        <div class="user-info">
+            <p>Nombre Apellido</p>
+            <p>correo@ejemplo.com</p>
+        </div>
+        <hr>
+        <a href='../login/login.html'>Salir</a>
+        <hr>
+    </aside>
+
+    <div class="container">
+        <h2>Gestión de Ubicaciones</h2>
+        <form id="locationForm">
+            <div class="form-group">
+                <label for="locationName">Nombre de la Ubicación:</label>
+                <input type="text" id="locationName" name="locationName" required>
+                <span class="error-message" id="locationNameError"></span>
+            </div>
+            <button type="submit">Agregar Ubicación</button>
+        </form>
+
+        <h3>Ubicaciones Registradas</h3>
+        <ul id="locationList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+

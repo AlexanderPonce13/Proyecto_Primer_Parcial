@@ -1,0 +1,71 @@
+body {
+    background-image: url('../img/fondo.jpg'); /* Establece una imagen de fondo */
+    font-family: Arial, sans-serif; /* Define la fuente predeterminada */
+    background-color: #f0f0f0; /* Establece el color de fondo */
+    margin: 0; /* Elimina el margen exterior */
+    padding: 0; /* Elimina el padding exterior */
+    display: flex; /* Utiliza el modelo de caja flexible */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Establece la altura al 100% de la ventana gráfica */
+}
+
+.container {
+    width: 300px; /* Establece el ancho del contenedor */
+    padding: 20px; /* Agrega un padding interior */
+    background-color: #fff; /* Establece el color de fondo del contenedor */
+    border: 1px solid #ddd; /* Establece un borde delgado */
+    border-radius: 5px; /* Redondea las esquinas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+}
+
+h2 {
+    text-align: center; /* Centra el texto */
+    margin-bottom: 20px; /* Agrega un margen inferior */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Agrega un margen inferior */
+}
+
+label {
+    display: none; /* Oculta las etiquetas ya que se usan placeholders */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Agrega un padding */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+    font-size: 14px; /* Establece el tamaño de la fuente */
+    border: 1px solid #ccc; /* Establece un borde delgado */
+    border-radius: 3px; /* Redondea las esquinas */
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="email"]::placeholder {
+    color: #888; /* Establece el color del placeholder */
+}
+
+button {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 10px; /* Agrega un padding */
+    background-color: #007bff; /* Establece el color de fondo */
+    color: #fff; /* Establece el color del texto */
+    border: none; /* Elimina el borde */
+    border-radius: 3px; /* Redondea las esquinas */
+    cursor: pointer; /* Cambia el cursor a puntero */
+    margin-top: 10px; /* Agrega un margen superior */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cambia el color de fondo al pasar el ratón */
+}
+
+.error-message {
+    color: red; /* Establece el color del texto */
+    font-size: 12px; /* Establece el tamaño de la fuente */
+    display: none; /* Oculta el mensaje de error por defecto */
+}

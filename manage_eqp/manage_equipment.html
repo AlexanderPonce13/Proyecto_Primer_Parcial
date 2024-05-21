@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Establecer la codificación de caracteres y la escala inicial -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Gestión de Equipos</title>
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Logo de la universidad -->
+        <div class="logo">
+            <img src="../img/logo-uleam.jpg" alt="Logo Uleam">
+        </div>
+        <!-- Barra de navegación -->
+        <nav>
+            <!-- Enlace al panel de inicio -->
+            <a href="../dashboard.html"><b>Inicio</b></a>
+            <!-- Enlace a la página de búsqueda -->
+            <a href='../busqueda/search.html'><b>Buscar</b></a>
+            <!-- Enlace a la página de gestión de equipos -->
+            <a href='../manage_gst/manage_gestion.html'><b>Gestionar Equipos</b></a>
+            <!-- Enlace a la página de gestión de ubicaciones -->
+            <a href='../gst_ubicacion/manage_locations.html'><b>Gestionar Ubicaciones</b></a>
+            <!-- Icono de la barra lateral -->
+            <div class="sidebar-icon" onclick="toggleSidebar()"><b>☰</b></div>
+        </nav>
+        <!-- Botón para regresar a la página principal -->
+      
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Título de la sección -->
+            <h2>Gestión de Equipos</h2>
+            <!-- Formulario para agregar un nuevo equipo -->
+            <form id="equipmentForm">
+                <!-- Campo para el número de serie -->
+                <div class="form-group">
+                    <label for="serialNumber">Número de Serie:</label>
+                    <input type="text" id="serialNumber" name="serialNumber" required>
+                    <span class="error-message" id="serialNumberError"></span>
+                </div>
+                <!-- Campo para el nombre del equipo -->
+                <div class="form-group">
+                    <label for="equipmentName">Nombre del Equipo:</label>
+                    <input type="text" id="equipmentName" name="equipmentName" required>
+                    <span class="error-message" id="equipmentNameError"></span>
+                </div>
+                <!-- Campo para la fecha de adquisición -->
+                <div class="form-group">
+                    <label for="acquisitionDate">Fecha de Adquisición:</label>
+                    <input type="date" id="acquisitionDate" name="acquisitionDate" required>
+                    <span class="error-message" id="acquisitionDateError"></span>
+                </div>
+                <!-- Campo para el estado -->
+                <div class="form-group">
+                    <label for="status">Estado:</label>
+                    <select id="status" name="status" required>
+                        <option value="">Seleccione un estado</option>
+                        <option value="activo">Activo</option>
+                        <option value="mantenimiento">En Mantenimiento</option>
+                        <option value="baja">Dado de Baja</option>
+                    </select>
+                    <span class="error-message" id="statusError"></span>
+                </div>
+                <!-- Campo para el departamento -->
+                <div class="form-group">
+                    <label for="department">Departamento:</label>
+                    <input type="text" id="department" name="department" required>
+                    <span class="error-message" id="departmentError"></span>
+                </div>
+                <!-- Campo para asignar a -->
+                <div class="form-group">
+                    <label for="assignee">Asignar a:</label>
+                    <input type="text" id="assignee" name="assignee" required>
+                    <span class="error-message" id="assigneeError"></span>
+                </div>
+                <!-- Botón para agregar el equipo -->
+                <button type="submit">Agregar Equipo</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Barra lateral -->
+    <aside id="sidebar" class="sidebar">
+        <!-- Botón para cerrar la barra lateral -->
+        <div class="close-btn" onclick="toggleSidebar()">×</div>
+        <!-- Información del usuario -->
+        <div class="user-info">
+            <p>Nombre Apellido</p>
+            <p>correo@ejemplo.com</p>
+        </div>
+        <hr>
+        <!-- Enlace para salir -->
+        <a href='../login/login.html'>Salir</a>
+        <hr>
+    </aside>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

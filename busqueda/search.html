@@ -1,0 +1,49 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento -->
+<html lang="es"> <!-- Inicio del documento HTML con especificación del idioma -->
+<head> <!-- Inicio de la sección de encabezado -->
+    <meta charset="UTF-8"> <!-- Configuración de la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configuración de la vista en dispositivos móviles -->
+    <title>Búsqueda de Equipos</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace a la hoja de estilos externa -->
+</head> <!-- Fin de la sección de encabezado -->
+<body> <!-- Inicio del cuerpo del documento -->
+    <header> <!-- Inicio del encabezado -->
+        <div class="logo"> <!-- División para el logotipo -->
+            <img src="../img/logo-uleam.jpg" alt="Logo Uleam"> <!-- Imagen del logotipo -->
+        </div> <!-- Fin de la división del logotipo -->
+        <nav> <!-- Inicio de la barra de navegación -->
+            <a href="../dashboard.html"><b>Inicio</b></a> <!-- Enlace a la página de inicio -->
+            <a href='../manage_eqp/manage_equipment.html'><b>Agregar Equipos</b></a> <!-- Enlace a la página de gestión de equipos -->
+            <a href='../manage_gst/manage_gestion.html'><b>Gestionar Equipos</b></a> <!-- Enlace a la página de gestión de equipos -->
+            <a href='../gst_ubicacion/manage_locations.html'><b>Gestionar Ubicaciones</b></a> <!-- Enlace a la página de gestión de ubicaciones -->
+            <div class="sidebar-icon" onclick="toggleSidebar()"><b>☰</b></div> <!-- Icono de la barra lateral para mostrar/ocultar la barra lateral -->
+        </nav> <!-- Fin de la barra de navegación -->
+    </header> <!-- Fin del encabezado -->
+
+    <aside id="sidebar" class="sidebar"> <!-- Barra lateral para contenido adicional -->
+        <div class="close-btn" onclick="toggleSidebar()">×</div> <!-- Botón para cerrar la barra lateral -->
+        <div class="user-info"> <!-- Información del usuario -->
+            <p>Nombre Apellido</p> <!-- Nombre del usuario -->
+            <p>correo@ejemplo.com</p> <!-- Correo electrónico del usuario -->
+        </div> <!-- Fin de la información del usuario -->
+        <hr> <!-- Línea horizontal -->
+        <a href='../login/login.html'>Salir</a> <!-- Enlace para salir -->
+        <hr> <!-- Línea horizontal -->
+    </aside> <!-- Fin de la barra lateral -->
+
+    <div class="container"> <!-- Contenedor principal -->
+        <h2>Búsqueda de Equipos</h2> <!-- Título de la página -->
+        <form id="searchForm"> <!-- Formulario de búsqueda -->
+            <div class="form-group"> <!-- Grupo de formulario -->
+                <label for="searchCriteria">Criterio de Búsqueda:</label> <!-- Etiqueta del campo de entrada -->
+                <input type="text" id="searchCriteria" name="searchCriteria" required> <!-- Campo de entrada para el criterio de búsqueda -->
+                <span class="error-message" id="searchCriteriaError"></span> <!-- Mensaje de error para el campo de entrada -->
+            </div> <!-- Fin del grupo de formulario -->
+            <button type="submit">Buscar</button> <!-- Botón de búsqueda -->
+        </form> <!-- Fin del formulario -->
+        <div id="searchResults"></div> <!-- Contenedor para los resultados de la búsqueda -->
+    </div> <!-- Fin del contenedor principal -->
+
+    <script src="script.js"></script> <!-- Inclusión del archivo de script -->
+</body> <!-- Fin del cuerpo del documento -->
+</html> <!-- Fin del documento HTML -->

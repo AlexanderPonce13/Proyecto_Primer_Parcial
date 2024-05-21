@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-tecnologia-cibernetica_23-2148390330.jpg?size=626&ext=jpg&ga=GA1.1.1788068356.1716163200&semt=ais_user');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #b10707;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 50px; /* Ajusta la altura del logo según sea necesario */
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 25px;
+    color: white;
+}
+header .sidebar-icon {
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+
+.sidebar {
+    display: none;
+    background-color: #dad9d9;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 50vh;
+    width: 250px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar .close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    text-align: right;
+}
+
+.sidebar .user-info {
+    margin-bottom: 20px;
+}
+
+.sidebar .user-info p {
+    color: #000000;
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background-color: #000000;
+    margin: 10px 0;
+}
+
+.sidebar a {
+    display: block;
+    margin: 20px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+.container {
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+    position: relative;
+    margin: 120px auto 0 auto; /* Centrar verticalmente con margen superior para evitar solapamiento con el encabezado */
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #46A2FD;
+}
+
+.container form {
+    width: 100%;
+}
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+    color: #030303;
+}
+
+.container input {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #F2F2F2;
+    font-size: 16px;
+    outline: none;
+}
+
+.container button[type="submit"] {
+    width: 100%;
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    font-size: 14px;
+    background: #46A2FD;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    outline: none;
+}
+
+.container button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+@media screen and (max-width: 850px) {
+    .container {
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .container form {
+        position: relative;
+    }
+}

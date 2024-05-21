@@ -1,0 +1,167 @@
+body {
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-tecnologia-cibernetica_23-2148390330.jpg?size=626&ext=jpg&ga=GA1.1.1788068356.1716163200&semt=ais_user'); /* Establece la imagen de fondo */
+    font-family: Arial, sans-serif; /* Define la fuente del texto */
+    margin: 0; /* Elimina los márgenes */
+    padding: 0; /* Elimina el relleno */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el cuerpo */
+    color: #333; /* Establece el color de texto */
+    display: flex; /* Establece la visualización en modo flex */
+    flex-direction: column; /* Establece la dirección de los elementos hijos como columna */
+    min-height: 100vh; /* Establece la altura mínima del cuerpo como el 100% del viewport */
+    background-color: #f4f4f4; /* Establece el color de fondo */
+}
+
+header {
+    background-color: #b10707; /* Establece el color de fondo del encabezado */
+    display: flex; /* Establece la visualización en modo flex */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos hijos */
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    padding: 10px; /* Añade relleno al encabezado */
+    width: 100%; /* Establece el ancho al 100% */
+    position: fixed; /* Fija el encabezado en la parte superior de la ventana */
+    top: 0; /* Alinea el encabezado en la parte superior */
+    z-index: 1000; /* Establece la superposición del encabezado */
+}
+
+header .logo img {
+    height: 50px; /* Ajusta la altura del logotipo */
+}
+
+header nav {
+    display: flex; /* Establece la visualización en modo flex */
+    align-items: center; /* Centra verticalmente los elementos hijos */
+}
+
+header nav a {
+    margin: 0 25px; /* Añade márgenes a los elementos de navegación */
+    color: white; /* Establece el color de texto */
+}
+
+header .sidebar-icon {
+    cursor: pointer; /* Establece el cursor como puntero */
+    color: white; /* Establece el color de texto */
+    margin-left: 10px; /* Añade margen izquierdo */
+}
+
+.sidebar {
+    display: none; /* Oculta la barra lateral */
+    background-color: #dad9d9; /* Establece el color de fondo de la barra lateral */
+    position: fixed; /* Fija la barra lateral en la ventana */
+    top: 0; /* Alinea la barra lateral en la parte superior */
+    right: 0; /* Alinea la barra lateral en el lado derecho */
+    height: 50vh; /* Establece la altura de la barra lateral al 50% del viewport */
+    width: 250px; /* Establece el ancho de la barra lateral */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5); /* Agrega sombra a la barra lateral */
+    padding: 20px; /* Añade relleno a la barra lateral */
+    overflow-y: auto; /* Permite desplazamiento vertical si el contenido excede la altura */
+    z-index: 1000; /* Establece la superposición de la barra lateral */
+}
+
+.sidebar .close-btn {
+    font-size: 30px; /* Establece el tamaño de fuente del botón de cierre */
+    cursor: pointer; /* Establece el cursor como puntero */
+    color: black; /* Establece el color de texto */
+    text-align: right; /* Alinea el texto a la derecha */
+}
+
+.sidebar .user-info {
+    margin-bottom: 20px; /* Añade margen inferior */
+}
+
+.sidebar .user-info p {
+    color: #000000; /* Establece el color de texto */
+    margin: 5px 0; /* Añade márgenes superior e inferior */
+    font-size: 1.2em; /* Establece el tamaño de fuente */
+}
+
+.sidebar hr {
+    border: 0; /* Elimina el borde */
+    height: 1px; /* Establece la altura */
+    background-color: #000000; /* Establece el color de fondo */
+    margin: 10px 0; /* Añade márgenes superior e inferior */
+}
+
+.sidebar a {
+    display: block; /* Convierte los enlaces en bloques */
+    margin: 20px 0; /* Añade márgenes */
+    text-decoration: none; /* Elimina la decoración de texto */
+    color: black; /* Establece el color de texto */
+    font-size: 1.2em; /* Establece el tamaño de fuente */
+}
+
+.container {
+    width: 90%; /* Establece el ancho al 90% */
+    margin: 20px auto; /* Centra horizontalmente con un margen superior e inferior de 20px */
+}
+
+h2 {
+    text-align: center; /* Alinea el texto al centro */
+    margin-bottom: 20px; /* Añade margen inferior */
+}
+
+button:hover {
+    background-color: #ddd; /* Cambia el color de fondo al pasar el ratón sobre el botón */
+}
+
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Fija el modal en la ventana */
+    z-index: 1000; /* Establece la superposición del modal */
+    left: 0; /* Alinea el modal a la izquierda */
+    top: 0; /* Alinea el modal en la parte superior */
+    width: 100%; /* Establece el ancho al 100% */
+    height: 100%; /* Establece la altura al 100% */
+    overflow: auto; /* Permite el desplazamiento si el contenido es más grande que el área del modal */
+    background-color: rgb(0, 0, 0); /* Establece el color de fondo */
+    background-color: rgba(0, 0, 0, 0.4); /* Establece el color de fondo con transparencia */
+    padding-top: 60px; /* Añade relleno en la parte superior */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Establece el color de fondo del contenido del modal */
+    margin: 5% auto; /* Establece los márgenes superior e inferior y centra horizontalmente */
+    padding: 20px; /* Añade relleno al contenido del modal */
+    border: 1px solid #888; /* Establece el borde */
+    width: 80%; /* Establece el ancho al 80% */
+    max-width: 500px; /* Establece el ancho máximo */
+}
+
+.close-btn {
+    color: #aaa; /* Establece el color del botón de cierre */
+    float: right; /* Alinea el botón a la derecha */
+    font-size: 28px; /* Establece el tamaño de fuente */
+    font-weight: bold; /* Establece el peso de la fuente */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black; /* Cambia el color del botón de cierre al pasar el ratón sobre él */
+    text-decoration: none; /* Elimina la decoración de texto */
+    cursor: pointer; /* Establece el cursor como puntero */
+}
+
+table {
+    width: 100%; /* Establece el ancho al 100% */
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+}
+
+th, td {
+    padding: 10px; /* Añade relleno a las celdas */
+    text-align: left; /* Alinea el texto a la izquierda */
+    border-bottom: 1px solid #ddd; /* Establece el borde inferior */
+}
+
+th {
+    background-color: #4CAF50; /* Establece el color de fondo de las celdas de encabezado */
+    color: white; /* Establece el color de texto */
+}
+
+tr:hover {
+    background-color: #f5f5f5; /* Cambia el color de fondo de la fila al pasar el ratón sobre ella */
+}
+
+button {
+    margin: 5px; /* Añade margen */
+    padding: 5px 10px; /* Añade relleno */
+    cursor: pointer; /* Establece el cursor como puntero */
+}

@@ -1,0 +1,224 @@
+body {
+    /* Establecer la imagen de fondo */
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-tecnologia-cibernetica_23-2148390330.jpg?size=626&ext=jpg&ga=GA1.1.1788068356.1716163200&semt=ais_user');
+    /* Establecer la fuente principal */
+    font-family: Arial, sans-serif;
+    /* Establecer un color de fondo de respaldo */
+    background-color: #f0f0f0;
+    /* Eliminar márgenes y relleno predeterminados */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* Establecer color de fondo */
+    background-color: #b10707;
+    /* Establecer el diseño de la caja flexible */
+    display: flex;
+    /* Alinear elementos horizontalmente */
+    justify-content: space-between;
+    /* Alinear elementos verticalmente */
+    align-items: center;
+    /* Permitir que los elementos dentro se envuelvan */
+    flex-wrap: wrap;
+    /* Fijar el encabezado en la parte superior de la página */
+    position: fixed;
+    /* Fijar el encabezado en la parte superior de la ventana gráfica */
+    top: 0;
+    /* Establecer el ancho del encabezado al 100% del viewport */
+    width: 100%;
+    /* Establecer una alta capa de visualización para estar sobre otros elementos */
+    z-index: 1000;
+    /* Agregar un relleno interior */
+    padding: 10px;
+}
+
+/* Estilos para el logo */
+header .logo img {
+    height: 90px;
+}
+
+/* Estilos para los iconos de redes sociales */
+header .social-media {
+    display: flex;
+    align-items: center;
+}
+
+header .social-media a img {
+    height: 30px;
+    margin: 0 20px;
+}
+
+/* Estilos para la barra de navegación */
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: white;
+}
+
+/* Estilos para el icono de la barra lateral */
+header .sidebar-icon {
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Estilos para la barra lateral */
+.sidebar {
+    /* Ocultar la barra lateral por defecto */
+    display: none;
+    /* Establecer color de fondo */
+    background-color: #dad9d9;
+    /* Fijar la barra lateral en la parte superior derecha */
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* Establecer altura */
+    height: 50vh;
+    /* Establecer ancho */
+    width: 250px;
+    /* Agregar sombra */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    /* Agregar relleno */
+    padding: 20px;
+    /* Permitir desplazamiento vertical */
+    overflow-y: auto;
+    /* Establecer una alta capa de visualización para estar sobre otros elementos */
+    z-index: 1000;
+}
+
+/* Estilos para el botón de cierre de la barra lateral */
+.sidebar .close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    text-align: right;
+}
+
+/* Estilos para la información del usuario en la barra lateral */
+.sidebar .user-info {
+    margin-bottom: 20px;
+}
+
+.sidebar .user-info p {
+    color: #000000;
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+/* Estilos para la línea divisoria en la barra lateral */
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background-color: #000000;
+    margin: 10px 0;
+}
+
+/* Estilos para los enlaces en la barra lateral */
+.sidebar a {
+    display: block;
+    margin: 20px 0;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+}
+
+/* Estilos para el contenido principal */
+main {
+    /* Agregar relleno */
+    padding: 20px;
+    /* Ajustar posición relativa para evitar superposición con el encabezado */
+    position: relative;
+    top: 120px; /* Ajuste para añadir espacio entre el encabezado y el formulario */
+}
+
+/* Estilos para el contenedor */
+.container {
+    /* Establecer ancho */
+    width: 300px;
+    /* Centrar horizontalmente */
+    margin: 0 auto;
+    /* Agregar relleno */
+    padding: 20px;
+    /* Establecer color de fondo */
+    background-color: #fff;
+    /* Agregar borde */
+    border: 1px solid #ddd;
+    /* Agregar bordes redondeados */
+    border-radius: 5px;
+    /* Agregar sombra */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el título */
+h2 {
+    /* Centrar texto */
+    text-align: center;
+    /* Establecer margen inferior */
+    margin-bottom: 20px;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    /* Establecer margen inferior */
+    margin-bottom: 15px;
+}
+
+/* Estilos para las etiquetas */
+label {
+    /* Mostrar como bloque y establecer margen inferior */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los campos de entrada y selección */
+input[type="text"], input[type="password"], select {
+    /* Establecer ancho al 100% */
+    width: 100%;
+    /* Agregar relleno */
+    padding: 8px;
+    /* Hacer que el tamaño de la caja incluya el relleno y el borde */
+    box-sizing: border-box;
+    /* Agregar borde */
+    border: 1px solid #ccc;
+    /* Agregar bordes redondeados */
+    border-radius: 3px;
+}
+
+/* Estilos para los botones */
+button {
+    /* Establecer ancho al 100% */
+    width: 100%;
+    /* Agregar relleno */
+    padding: 10px;
+    /* Establecer color de fondo */
+    background-color: #007bff;
+    /* Establecer color del texto */
+    color: #fff;
+    /* Eliminar borde */
+    border: none;
+    /* Agregar bordes redondeados */
+    border-radius: 3px;
+    /* Cambiar cursor al pasar el mouse */
+    cursor: pointer;
+    /* Establecer margen superior */
+    margin-top: 10px;
+}
+
+button:hover {
+    /* Cambiar color de fondo al pasar el mouse */
+    background-color: #0056b3;
+}
+
+/* Estilos para los mensajes de error */
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}

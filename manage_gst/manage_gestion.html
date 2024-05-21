@@ -1,0 +1,102 @@
+<!DOCTYPE html> <!-- Declaración del tipo de documento -->
+<html lang="es"> <!-- Inicio del elemento HTML con atributo lang="es" para indicar el idioma -->
+<head>
+    <meta charset="UTF-8"> <!-- Etiqueta meta para establecer la codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Etiqueta meta para la configuración de la vista en dispositivos móviles -->
+    <title>Gestión de Equipos</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos -->
+</head>
+<body>
+    <header> <!-- Encabezado de la página -->
+        <div class="logo"> <!-- Contenedor del logotipo -->
+            <img src="../img/logo-uleam.jpg" alt="Logo Uleam"> <!-- Imagen del logotipo -->
+        </div>
+        <nav> <!-- Barra de navegación -->
+            <a href="../dashboard.html"><b>Inicio</b></a> <!-- Enlace al panel de inicio -->
+            <a href='../busqueda/search.html'><b>Buscar</b></a> <!-- Enlace a la página de búsqueda -->
+            <a href='../manage_eqp/manage_equipment.html'><b>Agregar Equipos</b></a> <!-- Enlace a la página de gestión de equipos -->
+            <a href='../gst_ubicacion/manage_locations.html'><b>Gestionar Ubicaciones</b></a> <!-- Enlace a la página de gestión de ubicaciones -->
+            <div class="sidebar-icon" onclick="toggleSidebar()"><b>☰</b></div> <!-- Icono de la barra lateral -->
+        </nav>
+    </header>
+
+    <!-- Barra lateral -->
+    <aside id="sidebar" class="sidebar"> <!-- Elemento para la barra lateral -->
+        <div class="close-btn" onclick="toggleSidebar()">×</div> <!-- Botón para cerrar la barra lateral -->
+        <div class="user-info"> <!-- Información del usuario -->
+            <p>Nombre Apellido</p> <!-- Nombre del usuario -->
+            <p>correo@ejemplo.com</p> <!-- Correo electrónico del usuario -->
+        </div>
+        <hr> <!-- Línea divisoria -->
+        <a href='../login/login.html'>Salir</a> <!-- Enlace para salir -->
+        <hr> <!-- Línea divisoria -->
+    </aside>
+
+    <!-- Contenedor principal -->
+    <div class="container"> <!-- Contenedor principal -->
+        <h2>Gestión de Equipos</h2> <!-- Título de la sección -->
+        <!-- Tabla para mostrar los equipos -->
+        <table id="equipmentTable"> <!-- Tabla con identificador "equipmentTable" -->
+            <thead> <!-- Cabecera de la tabla -->
+                <tr> <!-- Fila de la cabecera -->
+                    <!-- Cabeceras de la tabla -->
+                    <th>Número de Serie</th>
+                    <th>Nombre del Equipo</th>
+                    <th>Fecha de Adquisición</th>
+                    <th>Estado</th>
+                    <th>Departamento</th>
+                    <th>Asignar a</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody> <!-- Cuerpo de la tabla -->
+                <!-- Las filas se agregarán dinámicamente aquí -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para editar equipo -->
+    <div id="editModal" class="modal"> <!-- Elemento para el modal de edición -->
+        <div class="modal-content"> <!-- Contenido del modal -->
+            <span class="close-btn">&times;</span> <!-- Botón para cerrar el modal -->
+            <h2>Editar Equipo</h2> <!-- Título del modal -->
+            <!-- Formulario para editar los detalles del equipo -->
+            <form id="editForm"> <!-- Formulario con identificador "editForm" -->
+                <div class="form-group"> <!-- Grupo de formulario -->
+                    <label for="editSerialNumber">Número de Serie:</label> <!-- Etiqueta para el campo "Número de Serie" -->
+                    <input type="text" id="editSerialNumber" name="editSerialNumber" readonly> <!-- Campo de texto para el número de serie (solo lectura) -->
+                </div>
+                <div class="form-group"> <!-- Grupo de formulario -->
+                    <label for="editEquipmentName">Nombre del Equipo:</label> <!-- Etiqueta para el campo "Nombre del Equipo" -->
+                    <input type="text" id="editEquipmentName" name="editEquipmentName" required> <!-- Campo de texto para el nombre del equipo -->
+                </div>
+                <div class="form-group"> <!-- Grupo de formulario -->
+                    <label for="editAcquisitionDate">Fecha de Adquisición:</label> <!-- Etiqueta para el campo "Fecha de Adquisición" -->
+                    <input type="date" id="editAcquisitionDate" name="editAcquisitionDate" required> <!-- Campo de fecha para la fecha de adquisición -->
+                </div>
+                <div class="form-group"> <!-- Grupo de formulario -->
+                    <label for="editStatus">Estado:</label> <!-- Etiqueta para el campo "Estado" -->
+                    <select id="editStatus" name="editStatus" required> <!-- Lista desplegable para el estado -->
+                        <option value="activo">Activo</option> <!-- Opción para estado "Activo" -->
+                        <option value="mantenimiento">En Mantenimiento</option> <!-- Opción para estado "En Mantenimiento" -->
+                        <option value="baja">Dado de Baja</option> <!-- Opción para estado "Dado de Baja" -->
+                    </select>
+                </div>
+                <div class="form-group"> <!-- Grupo de formulario -->
+                    <label for="editDepartment">Departamento:</label> <!-- Etiqueta para el campo "Departamento" -->
+                    <input type="text" id="editDepartment" name="editDepartment" required> <!-- Campo de texto para el departamento -->
+                </div>
+                <div class="form-group"> <!-- Grupo de formulario -->
+                    <label for="editAssignee">Asignar a:</label> <!-- Etiqueta para el campo "Asignar a" -->
+                    <input type="text" id="editAssignee" name="editAssignee" required> <!-- Campo de texto para la asignación -->
+                </div>
+                <!-- Botón para guardar los cambios -->
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script> <!-- Enlace al archivo de script -->
+</body>
+</html>
